@@ -13,7 +13,7 @@
 
                   $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                  }, 800, function(){
+                  }, 1600, function(){
 
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
@@ -37,37 +37,45 @@
         
         <!-- Background Overlay -->
         <div id='contentOverlay'></div>
+        <section class='contentBG' style='top: 100%;background:url("../images/pic1.jpg");'></section>
+        <section class='contentBG' style='top: 200%;'></section>
+        <section class='contentBG' style='top: 300%;background:url("../images/pic2.jpg");'></section>
+        <section class='contentBG' style='top: 400%;'></section>
+        <section class='contentBG' style='top: 500%;background:url("../images/pic1.jpg");'></section>
+        <section class='contentBG' style='top: 600%;'></section>
+        <section class='contentBG' style='top: 700%;background:url("../images/pic2.jpg");'></section>
+        <section class='contentBG' style='top: 800%;'></section>
+        <section class='contentBG' style='top: 900%;background:url("../images/pic1.jpg");'></section>
         
         <!-- Fixed Timeline -->
-        <div id='fixedTimeline'>
-            <ul id='timelineNavi'>
-                <li><a href='#preColonContent' class='timelineLinks'>Pre-Colonial Period</a></li>
-                <li><a href='#spanishContent' class='timelineLinks'>Spanish Occupation</a></li>
-                <li><a href='#americanContent' class='timelineLinks'>American Occupation</a></li>
-                <li><a href='#japaneseContent' class='timelineLinks'>Japanese Occupation</a></li>
-                <li><a href='#postColonContent' class='timelineLinks'>Post-Colonial Period</a></li>
-            </ul>
+        <div id='backToTop'>
+            <a href='#mainContent' class='timelineLinks'>Back to Top</a>
         </div>
         
         <!-- Content -->
-        <a id='preColon'></a>
-        <section id='preColonContent' class='contentPages'>
-        </section>
-        <a id='spanish'></a>
-        <section id='spanishContent' class='contentPages'>
-        </section>
-        <a id='american'></a>
-        <section id='americanContent' class='contentPages'>
-        </section>
-        <a id='japanese'></a>
-        <section id='japaneseContent' class='contentPages'>
-        </section>
-        <a id='postColon'></a>
+        <section id='mainContent'>
+            <br><br>
+            <p id='mainContent_title'>LEADERSHIP</p>
+            <a href='#preColonContent' class='timelineLinks'><p id='mainContent_title'>Start</p></a>
+        </section>        
+        <a href='#spanishContent' class='timelineLinks'>
+            <section id='preColonContent' class='contentPages'>
+                <div id='preColonContentMain' class='contentLeft'>
+                    Lorem ipsum pogi ni troy
+                </div>
+            </section>
+        </a>
+        <section class='contentPages contentBorders' style='top:200%;'></section>
+        <a href='#americanContent' class='timelineLinks'><section id='spanishContent' class='contentPages'>
+        </section></a>
+        <section class='contentPages contentBorders' style='top:400%;'></section>
+        <a href='#japaneseContent' class='timelineLinks'><section id='americanContent' class='contentPages'>
+        </section></a>
+        <section class='contentPages contentBorders' style='top:600%;'></section>
+        <a href='#postColonContent' class='timelineLinks'><section id='japaneseContent' class='contentPages'>
+        </section></a>
+        <section class='contentPages contentBorders' style='top:800%;'></section>
         <section id='postColonContent' class='contentPages'>
-        </section>
-        
-        <!-- Other Content -->
-        <section id='mainContent' class='contentPages'>
         </section>
     </body>
 </html>

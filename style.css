@@ -1,6 +1,6 @@
 /******** General ********/
 body {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /***** Header and Navigation *****/
@@ -18,7 +18,7 @@ body {
 
 #navigation {
     list-style-type: none;
-    height: 100%;
+    height: 10%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -39,19 +39,64 @@ body {
     text-align: center;
 }
 
-/***** Body *****/
+/***** Footer Navigation *****/
+#footer {
+    position: fixed;
+    top: 75%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+}
 
+.home_navi {
+    float: left;
+    position: relative;
+    top: 50%;
+    height: 50%;
+    width: 24.5%;
+    background-color: #EE3233;
+    box-shadow: 0px 0px 5px #000;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 16px;
+    color: #fff;
+    transition: top 1s, height 1s;
+}
+
+.home_navi:hover {
+    top: 0;
+    height: 100%;
+}
+
+.home_navi_border {
+    float: left;
+    position: relative;
+    top: 50%;
+    height: 50%;
+    width: 0.66%;
+    //background-color: #FFF;
+}
+
+.home_navi a {
+    font-family: Bebas Neue;
+    font-size: 32px;
+    color: #fff;
+}
+
+/***** Body *****/
 #contentOverlay {
     position: absolute;
     top: 0;
     left: 0;
-    height: 500%;
+    height: 1000%;
     width: 100%;
     background: -webkit-linear-gradient(#336699, #990033);
     background: -moz-linear-gradient(#336699, #990033);
     background: linear-gradient(#66A7C5, #EE3233);
     z-index: 3;
-    //opacity: 0.75;
+    opacity: 0.75;
 }
 
 #fixedTimeline {
@@ -60,10 +105,10 @@ body {
     left: 0;
     height: 90%;
     width: 100%;
-    background-image: url('images/timeline.png');
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: auto 100%;
+    //background-image: url('images/timeline.png');
+    //background-repeat: no-repeat;
+    //background-position: 50% 100%;
+    //background-size: auto 100%;
     z-index: 12;
 }
 
@@ -77,14 +122,31 @@ body {
 }
 
 #timelineNavi li {
-    height: 22.5%;
+    height: 21.5%;
 }
 
 #timelineNavi li a {
     font-family: Bebas Neue;
     font-size: 32px;
     color: #FFFF00;
-    //text-decoration: none;
+    text-decoration: none;
+}
+
+#backToTop {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    background: #FFFF00;
+    z-index: 8;
+    width: 95px;
+    height: 25px;
+}
+
+#backToTop a {
+    font-family: Bebas Neue;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;   
 }
 
 .contentPages {
@@ -94,53 +156,112 @@ body {
     z-index: 7;
 }
 
+.contentBG {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.contentBorders {
+    background-image: url('images/timeline0.png');
+    background-size: 13% 100%;
+    background-position: 49.35% 100%;
+    background-repeat: no-repeat;
+}
+
+/****** Content Shit *****/
+.contentLeft {
+    position: relative;
+    left: 5%;
+    top: 15%;
+    height: 80%;
+    width: 40%;
+    background: #FFF;
+    box-shadow: 0px 3px 10px #000;
+    color: #000; 
+}
+
+.contentRight {
+    position: relative;
+    left: 55%;
+    top: 15%;
+    height: 75%;
+    width: 40%;
+    background: #FFF;
+    box-shadow: 0px 3px 10px #000;
+    color: #000; 
+}
+
 #mainContent {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 7;
+    z-index: 8;
 }
 
 #mainContent_title {
     font-family: Bebas Neue;
-    font-size: 160px;
+    font-size: 150px;
     color: #FFFF00;
     text-align: center;
+    margin-top: 50px;
+}
+
+#mainContent_desc {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #000;
+    text-align: justify;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: -11%;
 }
 
 #preColonContent {
-    top: 0;
+    top: 100%;
     left: 0;
-    //background-image: url('images/pic1.jpg');
-    background-size: 100% 100%;
+    background-image: url('images/timeline1.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #spanishContent {
-    top: 100%;
+    top: 300%;
     left: 0;
-    //background-image: url('images/pic1.jpg');
-    background-size: 100% 100%;
+    background-image: url('images/timeline2.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #americanContent {
-    top: 200%;
+    top: 500%;
     left: 0;
-    //background-image: url('images/pic2.jpg');
-    background-size: 100% 100%;
+    background-image: url('images/timeline3.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #japaneseContent {
-    top: 300%;
+    top: 700%;
     left: 0;
-    //background-image: url('images/pic1.jpg');
-    background-size: 100% 100%;
+    background-image: url('images/timeline4.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #postColonContent {
-    top: 400%;
+    top: 900%;
     left: 0;
-    //background-image: url('images/pic2.jpg');
-    background-size: 100% 100%;
+    background-image: url('images/timeline5.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
