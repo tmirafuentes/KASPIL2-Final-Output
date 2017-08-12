@@ -37,6 +37,7 @@
 }
 
 /***** Body *****/
+
 #contentOverlay {
     position: absolute;
     top: 0;
@@ -57,9 +58,11 @@
 }
 
 #mainContent {
+    position: absolute;
     top: 0;
     left: 0;
-    //background-color: #336699;
+    height: 100%;
+    width: 100%;
     z-index: 7;
 }
 
@@ -73,34 +76,34 @@
 #preColonContent {
     top: 0;
     left: 0;
-    background-image: url('pic2.jpg');
+    background-image: url('images/pic2.jpg');
     background-size: 100% 100%;
 }
 
 #spanishContent {
     top: 100%;
     left: 0;
-    background-image: url('pic1.jpg');
+    background-image: url('images/pic1.jpg');
     background-size: 100% 100%;
 }
 
 #americanContent {
     top: 200%;
     left: 0;
-    background-image: url('pic2.jpg');
+    background-image: url('images/pic2.jpg');
     background-size: 100% 100%;
 }
 
 #japaneseContent {
     top: 300%;
     left: 0;
-    background-image: url('pic1.jpg');
+    background-image: url('images/pic1.jpg');
     background-size: 100% 100%;
 }
 
 #postColonContent {
     top: 400%;
     left: 0;
-    background-image: url('pic2.jpg');
+    background-image: url('images/pic2.jpg');
     background-size: 100% 100%;
 }
