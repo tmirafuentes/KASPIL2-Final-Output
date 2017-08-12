@@ -1,4 +1,7 @@
 /******** General ********/
+body {
+    overflow-y: hidden;
+}
 
 /***** Header and Navigation *****/
 #header {
@@ -9,7 +12,7 @@
     width: 100%;
     z-index: 10;
     background-color: #990033;
-    box-shadow: 0px 1px 5px #333;
+    box-shadow: 0px 1px 5px #000;
     text-align: center;
 }
 
@@ -47,14 +50,48 @@
     background: -webkit-linear-gradient(#336699, #990033);
     background: -moz-linear-gradient(#336699, #990033);
     background: linear-gradient(#336699, #990033);
-    z-index: 5;
-    opacity: 0.75;
+    z-index: 3;
+    //opacity: 0.75;
+}
+
+#fixedTimeline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/timeline.png');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: auto 90%;
+    z-index: 12;
+}
+
+#timelineNavi {
+    position: fixed;
+    top: 15%;
+    left: 27%;
+    list-style-type: none;
+    height: 80%;
+    width: 100%;
+}
+
+#timelineNavi li {
+    height: 22.5%;
+}
+
+#timelineNavi li a {
+    font-family: Bebas Neue;
+    font-size: 32px;
+    color: #FFFF00;
+    //text-decoration: none;
 }
 
 .contentPages {
     position: absolute;
     height: 100%;
     width: 100%;
+    z-index: 7;
 }
 
 #mainContent {
@@ -76,34 +113,33 @@
 #preColonContent {
     top: 0;
     left: 0;
-    background-image: url('images/pic2.jpg');
-    background-size: 100% 100%;
+
 }
 
 #spanishContent {
     top: 100%;
     left: 0;
-    background-image: url('images/pic1.jpg');
+    //background-image: url('images/pic1.jpg');
     background-size: 100% 100%;
 }
 
 #americanContent {
     top: 200%;
     left: 0;
-    background-image: url('images/pic2.jpg');
+    //background-image: url('images/pic2.jpg');
     background-size: 100% 100%;
 }
 
 #japaneseContent {
     top: 300%;
     left: 0;
-    background-image: url('images/pic1.jpg');
+    //background-image: url('images/pic1.jpg');
     background-size: 100% 100%;
 }
 
 #postColonContent {
     top: 400%;
     left: 0;
-    background-image: url('images/pic2.jpg');
+    //background-image: url('images/pic2.jpg');
     background-size: 100% 100%;
 }
