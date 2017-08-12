@@ -1,0 +1,106 @@
+/******** General ********/
+
+/***** Header and Navigation *****/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 10;
+    background-color: #990033;
+    box-shadow: 0px 1px 5px #333;
+    text-align: center;
+}
+
+#navigation {
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#navigation li {
+    float: left;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    color: #FFFFFF;
+    width: 19%;
+}
+
+#navigation li a {
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+}
+
+/***** Body *****/
+#contentOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500%;
+    width: 100%;
+    background: -webkit-linear-gradient(#336699, #990033);
+    background: -moz-linear-gradient(#336699, #990033);
+    background: linear-gradient(#336699, #990033);
+    z-index: 5;
+    opacity: 0.75;
+}
+
+.contentPages {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#mainContent {
+    top: 0;
+    left: 0;
+    //background-color: #336699;
+    z-index: 7;
+}
+
+#mainContent_title {
+    font-family: Bebas Neue;
+    font-size: 160px;
+    color: #FFFF00;
+    text-align: center;
+}
+
+#preColonContent {
+    top: 0;
+    left: 0;
+    background-image: url('pic2.jpg');
+    background-size: 100% 100%;
+}
+
+#spanishContent {
+    top: 100%;
+    left: 0;
+    background-image: url('pic1.jpg');
+    background-size: 100% 100%;
+}
+
+#americanContent {
+    top: 200%;
+    left: 0;
+    background-image: url('pic2.jpg');
+    background-size: 100% 100%;
+}
+
+#japaneseContent {
+    top: 300%;
+    left: 0;
+    background-image: url('pic1.jpg');
+    background-size: 100% 100%;
+}
+
+#postColonContent {
+    top: 400%;
+    left: 0;
+    background-image: url('pic2.jpg');
+    background-size: 100% 100%;
+}
