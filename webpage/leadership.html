@@ -3,23 +3,71 @@
         <link rel='stylesheet' href='../style.css'>
         <script type='text/javascript' src='../jquery-3.2.1.js'></script>
         <script type='text/javascript'>
+            function updateBackground(docu) {
+                var num = $(docu).scrollTop();
+                var total = $(window).height();
+                var percentage = Math.floor((num / total) * 100);
+                
+                if (percentage >= 0 && percentage <= 190)
+                    $("#mainBG").css("background", "url('../images/precolon.jpg')");
+                else if (percentage >= 191 && percentage <= 390)
+                    $("#mainBG").css("background", "url('../images/spanish.jpg')");
+                else if (percentage >= 391 && percentage <= 590)
+                    $("#mainBG").css("background", "url('../images/american.jpg')");
+                else if (percentage >= 591 && percentage <= 790)
+                    $("#mainBG").css("background", "url('../images/japanese.jpg')");
+                else if (percentage >= 791)
+                    $("#mainBG").css("background", "url('../images/postcolon.jpg')");
+                
+                $("#mainBG").css({"background-repeat" : "no-repeat", "background-size" : "cover", "background-position" : "center"});
+            }
+            
+            function textBoxAppear(docu) {
+                var num = $(docu).scrollTop();
+                var total = $(window).height();
+                var percentage = Math.floor((num / total) * 100);
+                
+                if (percentage == 100) {
+                    $(".contentLeft").animate({opacity: "0"});
+                    $("#preColonContentMain").animate({opacity: "1"});
+                } else if (percentage == 300) {
+                    $(".contentLeft").animate({opacity: "0"});
+                    $("#spanishContentMain").animate({opacity: "1"});
+                } else if (percentage == 500) {
+                    $(".contentLeft").animate({opacity: "0"});
+                    $("#americanContentMain").animate({opacity: "1"});
+                } else if (percentage == 700) {
+                    $(".contentLeft").animate({opacity: "0"});
+                    $("#japaneseContentMain").animate({opacity: "1"});
+                } else if (percentage == 900) {
+                    $(".contentLeft").animate({opacity: "0"});
+                    $("#postColonContentMain").animate({opacity: "1"});
+                }
+            }
+            
             $(document).ready(function(){
-              $(".timelineLinks").on('click', function(event) {
-                if (this.hash !== "") {
-                  event.preventDefault();
+                $(".timelineLinks").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        
+                        // Store hash
+                        var hash = this.hash;
 
-                  // Store hash
-                  var hash = this.hash;
-
-                  $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                  }, 1600, function(){
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                  });
-                } // End if
-              });
+                        $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                        }, 1600, function(){
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                        updateBackground(document);
+                        });
+                    } // End if
+                });
+                
+                $(document).scroll(function(){
+                    updateBackground(document);
+                    textBoxAppear(document);
+                });
+                //updateBackground(document);
             });
         </script>
     </head>
@@ -37,15 +85,15 @@
         
         <!-- Background Overlay -->
         <div id='contentOverlay'></div>
-        <section class='contentBG' style='top: 100%;background:url("../images/pic1.jpg");'></section>
-        <section class='contentBG' style='top: 200%;'></section>
-        <section class='contentBG' style='top: 300%;background:url("../images/pic2.jpg");'></section>
-        <section class='contentBG' style='top: 400%;'></section>
-        <section class='contentBG' style='top: 500%;background:url("../images/pic1.jpg");'></section>
-        <section class='contentBG' style='top: 600%;'></section>
-        <section class='contentBG' style='top: 700%;background:url("../images/pic2.jpg");'></section>
-        <section class='contentBG' style='top: 800%;'></section>
-        <section class='contentBG' style='top: 900%;background:url("../images/pic1.jpg");'></section>
+        <section class='contentBG' id='mainBG'></section>
+        <section class='contentBG' style='top:200%;'></section>
+        <section class='contentBG' style='top:300%;background:none;'></section>
+        <section class='contentBG' style='top:400%;'></section>
+        <section class='contentBG' style='top:500%;background:none;'></section>
+        <section class='contentBG' style='top:600%;'></section>
+        <section class='contentBG' style='top:700%;background:none;'></section>
+        <section class='contentBG' style='top:800%;'></section>
+        <section class='contentBG' style='top:900%;background:none;'></section>
         
         <!-- Fixed Timeline -->
         <div id='backToTop'>
@@ -53,29 +101,62 @@
         </div>
         
         <!-- Content -->
-        <section id='mainContent'>
+        <section id='mainContent' class='contentPages'>
             <br><br>
             <p id='mainContent_title'>LEADERSHIP</p>
-            <a href='#preColonContent' class='timelineLinks'><p id='mainContent_title'>Start</p></a>
+            <a href='#preColonContent' class='timelineLinks'><p id='mainContent_start'><br>Mag simula</p></a>
         </section>        
         <a href='#spanishContent' class='timelineLinks'>
             <section id='preColonContent' class='contentPages'>
                 <div id='preColonContentMain' class='contentLeft'>
                     Lorem ipsum pogi ni troy
                 </div>
+                <div class='contentRight'><br>
+                    PRE-COLONIAL PERIOD
+                </div>
             </section>
         </a>
         <section class='contentPages contentBorders' style='top:200%;'></section>
-        <a href='#americanContent' class='timelineLinks'><section id='spanishContent' class='contentPages'>
-        </section></a>
+        <a href='#americanContent' class='timelineLinks'>
+            <section id='spanishContent' class='contentPages'>
+                <div id='spanishContentMain' class='contentLeft'>
+                    Lorem ipsum pogi ni troy
+                </div>
+                <div class='contentRight'><br>
+                    SPANISH OCCUPATION
+                </div>
+            </section>
+        </a>
         <section class='contentPages contentBorders' style='top:400%;'></section>
-        <a href='#japaneseContent' class='timelineLinks'><section id='americanContent' class='contentPages'>
-        </section></a>
+        <a href='#japaneseContent' class='timelineLinks'>
+            <section id='americanContent' class='contentPages'>
+                <div id='americanContentMain' class='contentLeft'>
+                    Lorem ipsum pogi ni troy
+                </div>
+                <div class='contentRight'><br>
+                    AMERICAN OCCUPATION
+                </div>
+            </section>
+        </a>
         <section class='contentPages contentBorders' style='top:600%;'></section>
-        <a href='#postColonContent' class='timelineLinks'><section id='japaneseContent' class='contentPages'>
-        </section></a>
+        <a href='#postColonContent' class='timelineLinks'>
+            <section id='japaneseContent' class='contentPages'>
+                <div id='japaneseContentMain' class='contentLeft'>
+                    Lorem ipsum pogi ni troy
+                </div>
+                <div class='contentRight'><br>
+                    JAPANESE OCCUPATION
+                </div>
+            </section>
+        </a>
         <section class='contentPages contentBorders' style='top:800%;'></section>
         <section id='postColonContent' class='contentPages'>
+                <div id='postColonContentMain' class='contentLeft'>
+                    Lorem ipsum pogi ni troy
+                </div>
+                <div class='contentRight'><br>
+                    POST-COLONIAL PERIOD
+                </div>
         </section>
     </body>
 </html>
