@@ -46,6 +46,17 @@
                 }
             }
             
+            function backToTop() {
+                var num = $(document).scrollTop();
+                var total = $(window).height();
+                var percentage = Math.floor((num / total) * 100);
+                
+                if (percentage >= 0 && percentage <= 100)
+                    $("#backToTop").hide();
+                else
+                    $("#backToTop").show();
+            }
+            
             $(document).ready(function(){
                 $(".timelineLinks").on('click', function(event) {
                     if (this.hash !== "") {
@@ -69,6 +80,7 @@
                     textBoxAppear(document);
                 });
                 //updateBackground(document);
+            
             });
         </script>
     </head>
@@ -105,7 +117,7 @@
         <section id='mainContent' class='contentPages'>
             <br><br>
             <p id='mainContent_title'>INEQUALITY & INJUSTICE</p><br><br>
-            <p id='mainContent_desc'>Sa isang lipunan, nagkakaroon ng tunggalian dahil sa hindi pantay pantay na pagtingin sa mga tao na ninirahan dito. Bilang mga indibidwal na tao nais nating matingnan nang walang bahid ng panghuhusga at nararapat na respeto. Kung kaya’t sa kasaysayan natin maging hanggang ngayon ay madaming pagkakataon na ito ang nagiging ugat ng problema.</p><br><br>
+            <p id='mainContent_desc'>Sa isang lipunan, nagkakaroon ng tunggalian dahil sa hindi pantay pantay na pagtingin sa mga tao na ninirahan dito. Bilang mga indibidwal na tao nais nating matingnan nang walang bahid ng panghuhusga at nararapat na respeto. Kung kaya’t sa kasaysayan natin maging hanggang ngayon ay madaming pagkakataon na ito ang nagiging ugat ng problema.</p><br>
             <a href='#preColonContent' class='timelineLinks'><p id='mainContent_start'>Magsimula</p></a>
         </section>
         <section id='preColonContent' class='contentPages'>
