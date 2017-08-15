@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
         <link rel='stylesheet' href='../style.css'>
         <script type='text/javascript' src='../jquery-3.2.1.js'></script>
         <script type='text/javascript'>
@@ -30,19 +30,19 @@
                 
                 if (percentage == 100) {
                     $(".contentLeft").animate({opacity: "0"});
-                    $("#preColonContentMain").animate({opacity: "1"});
+                    $(".preColonContents").animate({opacity: "1"});
                 } else if (percentage == 300) {
                     $(".contentLeft").animate({opacity: "0"});
-                    $("#spanishContentMain").animate({opacity: "1"});
+                    $(".spanishContents").animate({opacity: "1"});
                 } else if (percentage == 500) {
                     $(".contentLeft").animate({opacity: "0"});
-                    $("#americanContentMain").animate({opacity: "1"});
+                    $(".americanContents").animate({opacity: "1"});
                 } else if (percentage == 700) {
                     $(".contentLeft").animate({opacity: "0"});
-                    $("#japaneseContentMain").animate({opacity: "1"});
+                    $(".japaneseContents").animate({opacity: "1"});
                 } else if (percentage == 900) {
                     $(".contentLeft").animate({opacity: "0"});
-                    $("#postColonContentMain").animate({opacity: "1"});
+                    $(".postColonContents").animate({opacity: "1"});
                 }
             }
             
@@ -104,10 +104,10 @@
         <!-- Content -->
         <section id='mainContent' class='contentPages'>
             <br><br>
-            <p id='mainContent_title'>RELIGION</p>
+            <p id='mainContent_title'>RELIGION</p><br><br>
             <p id='mainContent_desc'>Ang relihiyon ay isang kalipunan ng mga sistemang paniniwala, sakop nito ang mga pananaw sa buhay at ideolohiyang pangispiritual at minsan na di’y pang moralidad. Isa sa pinakamakabuluhang ebolusyon sa ating kasaysayan ay ang relihiyon sa ating bansa. Maraming pagbabago at pangiimpluwensya ang naganap sa paniniwala ng mga Pilipino.
             </p><br><br>
-            <a href='#preColonContent' class='timelineLinks'><p id='mainContent_start'><br>Magsimula</p></a>
+            <a href='#preColonContent' class='timelineLinks'><p id='mainContent_start'>Magsimula</p></a>
         </section>        
         <section id='preColonContent' class='contentPages'>
             <a href='#mainContent' class='timelineLinks'>
@@ -127,7 +127,7 @@
             <div class='contentRight'><br>
                 PRE-COLONIAL PERIOD
             </div>
-            <div style='position:absolute;top:72.5%;height:100px;width:100%;'>
+            <div style='position:absolute;top:71%;height:100px;width:100%;'>
                 <a href='#spanishContent' class='timelineLinks'>
                     <img src='../images/down.png' class='downArrows'>
                 </a>
@@ -139,7 +139,7 @@
             <a href='#preColonContent' class='timelineLinks'>
                 <img src='../images/up.png' class='upArrows'>
             </a>
-            <div id='spanishContentMain' class='contentLeft contentLeft1 spanishContents' style='top:2%;height:450px;'>
+            <div id='spanishContentMain' class='contentLeft contentLeft1 spanishContents' style='top:2%;height:425px;'>
                 <div class='contentHeader'>KRISTYANISMO</div>
                 <p class='contentBody'>
                     Sa pagpunta ng mga Espanyol sa Pilipinas, ang pangunahing layunin nila ay ang ipalaganap ang Kristyanismo. Makikita ito sa kadahilanang karamihan ng pumunta sa ating bansa ay mga pari. Sa 333 na taon na pamamalagi nila sa bansa, naging paraan nila ng pagkontrol sa mga tao ang Kristyanismo. 
@@ -151,7 +151,7 @@
             <div class='contentRight'><br>
                 SPANISH OCCUPATION
             </div>
-            <div style='position:absolute;top:72.5%;height:100px;width:100%;'>
+            <div style='position:absolute;top:71%;height:100px;width:100%;'>
                 <a href='#americanContent' class='timelineLinks'>
                     <img src='../images/down.png' class='downArrows'>
                 </a>
@@ -174,7 +174,7 @@
             <div class='contentRight'><br>
                 AMERICAN OCCUPATION
             </div>
-            <div style='position:absolute;top:72.5%;height:100px;width:100%;'>
+            <div style='position:absolute;top:71%;height:100px;width:100%;'>
                 <a href='#japaneseContent' class='timelineLinks'>
                     <img src='../images/down.png' class='downArrows'>
                 </a>
@@ -185,7 +185,7 @@
             <a href='#americanContent' class='timelineLinks'>
                 <img src='../images/up.png' class='upArrows'>
             </a>
-            <div id='japaneseContentMain' class='contentLeft'>
+            <div id='japaneseContentMain' class='contentLeft contentLeft1 americanContents' style='height:310px;'>
                 <div class='contentHeader'>MANILA MASSACRE</div>
                 <p class='contentBody'>
                     Ang mga Relihiyosong na Sektor, lalo na ang mga Katoliko, ay pinagpapatay sa Maynila Massacre noong patapos na yung Japanese occupancy. Pinagpapatay ang mga nasa loob ng mga sikat ng Katolikong Simbahan kagaya ng Santo Domingo Church, Manila Cathedral, Paco Church, St. Paul’s Convent, at St. Vincent de Paul Church.
@@ -194,16 +194,19 @@
             <div class='contentRight'><br>
                 JAPANESE OCCUPATION
             </div>
-            <a href='#postColonContent' class='timelineLinks'>
-                <img src='../images/down.png' class='downArrows'>
-            </a>
+            <div style='position:absolute;top:71%;height:100px;width:100%;'>
+                <a href='#postColonContent' class='timelineLinks'>
+                    <img src='../images/down.png' class='downArrows'>
+                </a>
+            </div>
         </section>
         <section class='contentPages contentBorders' style='top:800%;background-color:#9b270e;'></section>
         <section id='postColonContent' class='contentPages'>
             <a href='#japaneseContent' class='timelineLinks'>
                 <img src='../images/up.png' class='upArrows'>
             </a>
-                <div id='postColonContentMain' class='contentLeft contentLeft1 postColonContents'>
+                <div id='postColonContentMain' class='contentLeft contentLeft1 postColonContents' style='height:290px;'>
+                    <div class='contentHeader'>EDSA REVOLUTION</div>
                     <p class='contentBody'>
                         Ginamit ang relihiyon sa people power revolution noong 1986, kung saan nagsama sama ang mga Pilipino sa EDSA para paalisin sa pwesto si Pangulong Marcos. Sa bisa ng dasal, mga imahen at rosaryo, mapayapang napaalis si Marcos. Nagkaisa ang nakararami dahil sa pagiging Kristyano.
                     </p>
